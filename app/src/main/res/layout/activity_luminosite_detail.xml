@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LuminositeDetail">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Luminosité"
+        android:textAlignment="center"
+        android:textAppearance="@style/Titre" />
+
+    <TextView
+        android:id="@+id/messageLum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="25dp"
+        android:text="Tout est OK"
+        android:textAlignment="center"
+        android:textAppearance="@style/sousTitre" />
+
+    <TextView
+        android:id="@+id/bodyLum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/valeurLum"
+        android:layout_marginTop="50dp"
+        android:text="erreur"
+        android:textAppearance="@style/bodyText" />
+
+    <TextView
+        android:id="@+id/valeurLum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/messageLum"
+        android:layout_marginTop="20dp"
+        android:text="Valeur"
+        android:textAlignment="center"
+        android:textColor="@color/info"
+        android:textSize="24sp" />
+
+
+</RelativeLayout>

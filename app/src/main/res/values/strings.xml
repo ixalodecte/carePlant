@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">PlantProject</string>
+    <string name="welcome">Votre plante :</string>
+    <string name="nomPlante">test</string>
+    <string name="etatReservoir">OK</string>
+    <string name="etatBatterie">OK</string>
+    <string name="tempInfo1">Les %1$s preferent les temperatures entre %2$.1f et %3$.1f,  La temperature est %4$.1f</string>
+    <string name="tempInfo2">Les %1$s preferent les temperatures %2$s, entre %3$d et 4$d, idéalement entre %5$s et </string>
+    <string name="humInfo1">Les %1$s preferent les humiditées du sol entre %2$.1f et %3$.1f. L\'humiditée est %4$.1f</string>
+    <string name="lumInfo1">Les %1$s preferent les luminosités entre %2$.1f et %3$.1f. La luminosité est %4$.1f</string>
+    <string name="infoBatterie">Batterie : %1$s</string>
+    <string name="infoReservoir">Resevoir : %1$d</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+</resources>

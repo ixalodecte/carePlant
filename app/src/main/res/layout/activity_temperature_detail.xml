@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".temperatureDetail">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Temperature"
+        android:textAlignment="center"
+        android:textAppearance="@style/Titre" />
+
+    <TextView
+        android:id="@+id/messageTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="25dp"
+        android:text="Tout est OK"
+        android:textAlignment="center"
+        android:textAppearance="@style/sousTitre" />
+
+    <TextView
+        android:id="@+id/bodyTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="erreur"
+        android:textAppearance="@style/bodyText"
+        android:layout_below="@+id/valeurTemp"/>
+
+    <TextView
+        android:id="@+id/valeurTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Valeur"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/info"
+        android:textSize="24sp"
+        android:layout_below="@+id/messageTemp"
+        />
+
+</RelativeLayout>

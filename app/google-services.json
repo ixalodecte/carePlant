@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "520973218778",
+    "firebase_url": "https://careplant-bad6a.firebaseio.com",
+    "project_id": "careplant-bad6a",
+    "storage_bucket": "careplant-bad6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:520973218778:android:6e49489e0e4ad6c6fec6e3",
+        "android_client_info": {
+          "package_name": "plantProject.fr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "520973218778-oik3rtgo9e8ahl9d8s29oq4fjc4i0h0m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "plantProject.fr",
+            "certificate_hash": "471ba2756b93bcdb42cc4ce7efe24878e878474b"
+          }
+        },
+        {
+          "client_id": "520973218778-mhj9m95vqaf3jq66v3ap22a7b61sq5an.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpQsagoFjnasP6dEExMV76zGgSorMQhiA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "520973218778-mhj9m95vqaf3jq66v3ap22a7b61sq5an.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

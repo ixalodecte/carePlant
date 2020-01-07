@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/welcome"
+        android:textAlignment="center"
+        android:textAppearance="@style/Titre" />
+
+    <ImageView
+        android:id="@+id/logo_temp"
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        android:layout_below="@+id/nomPlante"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/termo_vert" />
+
+    <ImageView
+        android:id="@+id/logo_lum"
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        android:layout_below="@id/nomPlante"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@+id/logo_temp"
+        android:clickable="true"
+        app:srcCompat="@drawable/lumiere_vert" />
+
+    <TextView
+        android:id="@+id/nomPlante"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="25dp"
+        android:text="@string/nomPlante"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <ImageView
+        android:id="@+id/logo_hum"
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        android:layout_below="@+id/nomPlante"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@id/logo_lum"
+        app:srcCompat="@drawable/gouttes_vert" />
+
+    <TextView
+        android:id="@+id/ReservoirDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/infoReservoir"
+        android:layout_below="@id/logo_lum"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginBottom="274dp"
+        android:text="@string/infoBatterie"
+        android:layout_below="@id/ReservoirDesc"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <Button
+        android:id="@+id/paramButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ReservoirDesc"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:text="parametre\nFaire ça plus tard" />
+
+    <ImageButton
+        android:id="@+id/rechercheButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/nomPlante"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="50dp"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+
+</RelativeLayout>
