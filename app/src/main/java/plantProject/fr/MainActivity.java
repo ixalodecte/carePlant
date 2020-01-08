@@ -28,7 +28,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends NavDrawerActivity {
 
 
     private ImageView temp;
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             databasePlant database = new databasePlant(getApplicationContext());
             plante = database.findPlanteByName(this.nom);
             //Si la plante n'est pas dans la base de donnée:
-            if (plante == null){
+            if (plante == null || this.plante == null){
                 Intent openRech = new Intent(getApplicationContext(), recherchePlante.class);
                 startActivity(openRech);
                 finish();
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
         this.param.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent openParam = new Intent(getApplicationContext(), SettingsActivity.class);
+                Intent openParam = new Intent(getApplicationContext(), NavDrawerActivity.class);
                 startActivity(openParam);
             }
         });
