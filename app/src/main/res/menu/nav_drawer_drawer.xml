@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_search"
+            android:icon="@drawable/ic_searchplant"
+            android:title="Trouver une autre plante"/>
+        <item android:id="@+id/parametre"
+            android:icon="@drawable/ic_settings"
+            android:title="Parametre"/>
+    </group>
+
+    <item android:title="Section">
+        <menu>
+            <item
+                android:id="@+id/nav_temp"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Temperature" />
+            <item
+                android:id="@+id/nav_hum"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Humidite" />
+        </menu>
+    </item>
+
+</menu>
