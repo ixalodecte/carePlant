@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class LuminositeDetail extends AppCompatActivity {
+public class LuminositeDetail extends NavDrawerActivity {
 
     private TextView texte;
     private TextView message;
