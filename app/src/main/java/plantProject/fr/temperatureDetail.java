@@ -6,7 +6,7 @@ import android.Manifest;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class temperatureDetail extends AppCompatActivity {
+public class temperatureDetail extends NavDrawerActivity {
 
     private TextView texte;
     private TextView message;
@@ -15,7 +15,7 @@ public class temperatureDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_temperature_detail);
+        setContent(R.layout.activity_temperature_detail);
 
         texte = findViewById(R.id.bodyTemp);
 

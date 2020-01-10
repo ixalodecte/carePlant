@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class humiditeDetail extends AppCompatActivity {
+public class humiditeDetail extends NavDrawerActivity {
 
     private TextView texte;
     private TextView message;
@@ -13,7 +13,7 @@ public class humiditeDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_humidite_detail);
+        setContent(R.layout.activity_humidite_detail);
 
 
         texte = findViewById(R.id.bodyHum);

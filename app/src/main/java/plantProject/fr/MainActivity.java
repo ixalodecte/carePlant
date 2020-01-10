@@ -28,7 +28,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends NavDrawerActivity {
 
 
     private ImageView temp;
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContent(R.layout.activity_main);
         this.temp = findViewById(R.id.logo_temp);
         this.lum = findViewById(R.id.logo_lum);
         this.hum = findViewById(R.id.logo_hum);

@@ -13,8 +13,9 @@ public class LuminositeDetail extends NavDrawerActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_luminosite_detail);
+        setContent(R.layout.activity_luminosite_detail);
 
 
         texte = findViewById(R.id.bodyLum);

@@ -20,7 +20,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class recherchePlante extends AppCompatActivity {
+public class recherchePlante extends NavDrawerActivity {
     private Button choixValide;
     private EditText recherche;
     private ListView resultatRecherche;
@@ -31,7 +31,7 @@ public class recherchePlante extends AppCompatActivity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recherche_plante);
+        setContent(R.layout.activity_recherche_plante);
         choixValide = findViewById(R.id.buttonOk);
         recherche = findViewById(R.id.barreRecherche);
         resultatRecherche = findViewById(R.id.listResultat);

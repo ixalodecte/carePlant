@@ -12,6 +12,13 @@
         layout="@layout/app_bar_nav_drawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+    <RelativeLayout android:id="@+id/lecontenu"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    </RelativeLayout>
+
 
 
     <com.google.android.material.navigation.NavigationView
@@ -22,5 +29,7 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_nav_drawer"
         app:menu="@menu/nav_drawer_drawer" />
+
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
