@@ -87,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ReservoirDesc"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="26dp"
         android:text="parametre\nFaire ça plus tard"
         android:visibility="invisible" />
 
@@ -105,11 +105,11 @@
 
     <ImageView
         android:id="@+id/error"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView5"
-        android:layout_marginLeft="66dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/paramButton"
+
         android:src="@drawable/error" />
 
 

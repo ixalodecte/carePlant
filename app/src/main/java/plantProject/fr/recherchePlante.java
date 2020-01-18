@@ -17,6 +17,9 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -80,8 +83,13 @@ public class recherchePlante extends NavDrawerActivity {
                 editeur.putString(MainActivity.NOM, nom);
                 editeur.commit();
 
+                //Enregistrement sur firebase
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("info");
 
-                //On ouvre une nouvelle activité
+                myRef.child("humiditeMoins").setValue(123456);
+
+                //On ouvre le tableau de bord
                 Intent openMainAct = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(openMainAct);
                 finish();
