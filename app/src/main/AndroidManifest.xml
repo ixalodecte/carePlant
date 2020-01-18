@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".Reservoir_detail"></activity>
         <activity
             android:name=".NavDrawerActivity"
             android:label="@string/title_activity_nav_drawer"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".recherchePlante" />
         <activity
             android:name=".SettingsActivity"
@@ -21,8 +21,9 @@
         <activity android:name=".parametre" />
         <activity android:name=".humiditeDetail" />
         <activity android:name=".temperatureDetail" />
-        <activity android:name=".LuminositeDetail"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".LuminositeDetail"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

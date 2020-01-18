@@ -9,6 +9,7 @@ import com.google.android.material.snackbar.Snackbar;
 import android.view.MenuItem;
 import android.view.View;
 
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -61,6 +62,9 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
 
 
         FloatingActionButton fab = findViewById(R.id.fab);
+
+
+        fab.hide(); // in place of visible
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

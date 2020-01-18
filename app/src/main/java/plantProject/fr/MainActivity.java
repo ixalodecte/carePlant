@@ -83,8 +83,12 @@ public class MainActivity extends NavDrawerActivity {
         if (this.nom == ""){
             Intent openRech = new Intent(getApplicationContext(), recherchePlante.class);
             startActivity(openRech);
+
+
             finish();
         }
+
+
 
         else {
             databasePlant database = new databasePlant(getApplicationContext());
@@ -95,84 +99,88 @@ public class MainActivity extends NavDrawerActivity {
                 startActivity(openRech);
                 finish();
             }
+            else{
+
+
+
+                //affichage nom de la plante
+                this.TV_nomPlante.setText(this.nom);
+
+
+                capteurs = FirebaseDatabase.getInstance().getReference().child("capteurs");
+                capteurs.child("timestamp").setValue("coolool");
+
+
+                this.temp.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent openTemp = new Intent(getApplicationContext(), temperatureDetail.class);
+                        startActivity(openTemp);
+                    }
+                });
+
+                this.lum.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent openLum = new Intent(getApplicationContext(), LuminositeDetail.class);
+                        startActivity(openLum);
+                    }
+                });
+
+                this.hum.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent openHum = new Intent(getApplicationContext(), humiditeDetail.class);
+                        startActivity(openHum);
+                    }
+                });
+
+                this.param.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent openParam = new Intent(getApplicationContext(), NavDrawerActivity.class);
+                        startActivity(openParam);
+                    }
+                });
+
+                this.recherche.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent openRech = new Intent(getApplicationContext(), recherchePlante.class);
+                        startActivity(openRech);
+                        finish();
+                    }
+                });
+
+                capteurs.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot locationSnapshot : dataSnapshot.getChildren()) {
+                            String location = locationSnapshot.getKey();
+                            Log.d("nom:", location);
+                            if (location.equals("humidite")){
+                                MainActivity.humidite = locationSnapshot.getValue(double.class);
+                            }
+                            if (location.equals("temperature")){
+                                MainActivity.temperature = locationSnapshot.getValue(double.class);
+                            }
+                            if (location.equals("luminosite")){
+                                MainActivity.luminosite = locationSnapshot.getValue(double.class);
+                            }
+                            if (location.equals("niveau")){
+                                reservoir.setText(String.format(getString(R.string.infoReservoir), locationSnapshot.getValue(int.class) ));
+                            }
+
+                        }
+                        changeImage();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                    }
+            });}
         }
 
-        //affichage nom de la plante
-        this.TV_nomPlante.setText(this.plante.nom);
-
-
-        capteurs = FirebaseDatabase.getInstance().getReference().child("capteurs");
-        capteurs.child("timestamp").setValue("coolool");
-
-
-        this.temp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent openTemp = new Intent(getApplicationContext(), temperatureDetail.class);
-                startActivity(openTemp);
-            }
-        });
-
-        this.lum.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent openLum = new Intent(getApplicationContext(), LuminositeDetail.class);
-                startActivity(openLum);
-            }
-        });
-
-        this.hum.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent openHum = new Intent(getApplicationContext(), humiditeDetail.class);
-                startActivity(openHum);
-            }
-        });
-
-        this.param.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent openParam = new Intent(getApplicationContext(), NavDrawerActivity.class);
-                startActivity(openParam);
-            }
-        });
-
-        this.recherche.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent openRech = new Intent(getApplicationContext(), recherchePlante.class);
-                startActivity(openRech);
-                finish();
-            }
-        });
-
-        capteurs.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot locationSnapshot : dataSnapshot.getChildren()) {
-                    String location = locationSnapshot.getKey();
-                    Log.d("nom:", location);
-                    if (location.equals("humidite")){
-                        MainActivity.humidite = locationSnapshot.getValue(double.class);
-                    }
-                    if (location.equals("temperature")){
-                        MainActivity.temperature = locationSnapshot.getValue(double.class);
-                    }
-                    if (location.equals("luminosite")){
-                        MainActivity.luminosite = locationSnapshot.getValue(double.class);
-                    }
-                    if (location.equals("niveau")){
-                        reservoir.setText(String.format(getString(R.string.infoReservoir), locationSnapshot.getValue(int.class) ));
-                    }
-
-                }
-                changeImage();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-            }
-        });
 
 
     }

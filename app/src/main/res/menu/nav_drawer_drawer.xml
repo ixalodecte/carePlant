@@ -16,11 +16,11 @@
         <menu>
             <item
                 android:id="@+id/nav_temp"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_weather"
                 android:title="Temperature" />
             <item
                 android:id="@+id/nav_hum"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_raindrop_close_up"
                 android:title="Humidite" />
         </menu>
     </item>
