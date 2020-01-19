@@ -4,12 +4,15 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="tableau de bord"/>
+
         <item android:id="@+id/nav_search"
             android:icon="@drawable/ic_searchplant"
             android:title="Trouver une autre plante"/>
-        <item android:id="@+id/nav_parametre"
-            android:icon="@drawable/ic_settings"
-            android:title="Parametre"/>
+
     </group>
 
     <item android:title="Section">
@@ -22,6 +25,16 @@
                 android:id="@+id/nav_hum"
                 android:icon="@drawable/ic_raindrop_close_up"
                 android:title="Humidite" />
+        </menu>
+    </item>
+
+    <item android:title="Systeme">
+        <menu>
+            <item
+                android:id="@+id/nav_reservoir"
+                android:icon="@drawable/watertank"
+                android:title="Reservoir" />
+
         </menu>
     </item>
 

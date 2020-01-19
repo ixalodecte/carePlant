@@ -2,40 +2,28 @@ package plantProject.fr;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
-
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.view.Menu;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
-
-import java.util.LinkedList;
+import com.google.android.material.snackbar.Snackbar;
 
 public class NavDrawerActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private AppBarConfiguration mAppBarConfiguration;
-    public String[] layers;
     public DrawerLayout drawer;
 
 
@@ -43,10 +31,7 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        View nav;
-        Button temp;
-        Button hum;
-        Button search;
+
 
 
 
@@ -92,13 +77,6 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
 
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.nav_drawer, menu);
-        return true;
-    }
-
-    @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
@@ -106,13 +84,13 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
     }
 
     public void setContent(int r){
-        RelativeLayout placeHolder = (RelativeLayout) findViewById(R.id.lecontenu);
+        RelativeLayout placeHolder = findViewById(R.id.lecontenu);
         getLayoutInflater().inflate(r, placeHolder);
 
     }
 
     private void setNavigationViewListener() {
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -131,16 +109,23 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
                 startActivity(openHum);
                 break;
             }
-            case R.id.nav_parametre:{
-                Intent openParam = new Intent(getApplicationContext(), parametre.class);
-                startActivity(openParam);
-                break;
-            }
+
             case R.id.nav_temp:{
                 Intent openTemp = new Intent(getApplicationContext(), temperatureDetail.class);
                 startActivity(openTemp);
                 break;
             }
+            case R.id.nav_reservoir:{
+                Intent openreservoir = new Intent(getApplicationContext(), Reservoir_detail.class);
+                startActivity(openreservoir);
+                break;
+            }
+            case R.id.nav_home:{
+                Intent openMain = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(openMain);
+                break;
+            }
+
         }
         drawer.closeDrawer(GravityCompat.START);
 

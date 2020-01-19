@@ -88,10 +88,7 @@ public class databasePlant extends SQLiteOpenHelper {
         c.put(COL_6, luminositePlus);
         long resultat = db.insert(TABLE_NAME, null, c);
         db.close();
-        if (resultat == -1) {
-            return false;
-        }
-        return true;
+        return resultat != -1;
 
 
     }
@@ -130,10 +127,10 @@ public class databasePlant extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         String sql;
         if(chaine.equals("")){
-            sql = "SELECT * FROM " + this.TABLE_NAME;
+            sql = "SELECT * FROM " + TABLE_NAME;
         }
         else {
-            sql = "SELECT * FROM " + this.TABLE_NAME + " WHERE " + this.NOM + " LIKE '%" + chaine + "%'";
+            sql = "SELECT * FROM " + TABLE_NAME + " WHERE " + NOM + " LIKE '%" + chaine + "%'";
         }
         sql += " ORDER BY nom";
         Cursor cursor = db.rawQuery(sql, null);

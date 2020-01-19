@@ -1,8 +1,5 @@
 package plantProject.fr;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.Manifest;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -36,6 +33,6 @@ public class temperatureDetail extends NavDrawerActivity {
             message.setText("Tout est OK");
         }
 
-        valeur.setText(String.valueOf(MainActivity.temperature) + " °C");
+        valeur.setText(MainActivity.temperature + " °C");
     }
 }

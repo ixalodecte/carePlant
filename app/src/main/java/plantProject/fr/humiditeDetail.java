@@ -1,7 +1,5 @@
 package plantProject.fr;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -35,6 +33,6 @@ public class humiditeDetail extends NavDrawerActivity {
             message.setText("Tout est OK");
         }
 
-        valeur.setText(String.valueOf(MainActivity.humidite) + " %");
+        valeur.setText(MainActivity.humidite + " %");
     }
 }

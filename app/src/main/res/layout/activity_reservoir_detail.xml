@@ -11,31 +11,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:text="Reservoir"
+        android:text="Réservoir"
         android:textAlignment="center"
         android:textAppearance="@style/Titre" />
 
     <TextView
-        android:id="@+id/messageTemp"
+        android:id="@+id/messageNiveau"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_marginTop="25dp"
-        android:text="Le reservoir est plein"
+        android:text="Le réservoir est plein"
         android:textAlignment="center"
         android:textAppearance="@style/sousTitre" />
 
-    <TextView
-        android:id="@+id/bodyTemp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="erreur"
-        android:textAppearance="@style/bodyText"
-        android:layout_below="@+id/valeurTemp"/>
 
     <TextView
-        android:id="@+id/valeurTemp"
+        android:id="@+id/valeurNiveau"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
@@ -43,7 +35,16 @@
         android:layout_marginTop="20dp"
         android:textColor="@color/info"
         android:textSize="24sp"
-        android:layout_below="@+id/messageTemp"
+        android:layout_below="@+id/messageNiveau"
         />
+    <ImageView
+        android:id="@+id/imageReservoir"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/reservoir_100"
+        android:layout_below="@+id/valeurNiveau"/>
+
 
 </RelativeLayout>
