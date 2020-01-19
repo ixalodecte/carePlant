@@ -39,6 +39,7 @@ public class databasePlant extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        //insertion des plantes
         db.execSQL(TABLE_CREATE);
         db.execSQL("INSERT INTO " + TABLE_NAME + " Values('epicea', 2.0, 50.0, 20, 30, 3000, 7000)");
         db.execSQL("INSERT INTO " + TABLE_NAME + " Values('clivia', 10.0, 60.0, 7, 40, 1000, 2000 )");
@@ -76,6 +77,7 @@ public class databasePlant extends SQLiteOpenHelper {
         db.close();
     }
 
+    //Non utilisé dans notre projet
     public boolean insertData(String nom, double humiditeMoins, double humiditePlus, double temperatureMoins, double temperaturePlus, double luminositeMoins, double luminositePlus){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues c = new ContentValues();
@@ -93,6 +95,7 @@ public class databasePlant extends SQLiteOpenHelper {
 
     }
 
+    //Lot de fonction pour transformer une chaine en Plante
     public Plante cursorToPlant(Cursor c){
         Plante plante = new Plante();
         plante.nom = c.getString(c.getColumnIndex(NOM));
@@ -122,6 +125,7 @@ public class databasePlant extends SQLiteOpenHelper {
     }
 
     //auteur (inspiré de) : https://hacksmile.com/android-sqlite-search-searching-sqlite-database-in-android/
+    //Renvoie une liste de nom correspondant
     public LinkedList<Plante> search(String chaine){
         LinkedList<Plante> liste = new LinkedList<Plante>();
         SQLiteDatabase db = this.getWritableDatabase();
