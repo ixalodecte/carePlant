@@ -11,3 +11,7 @@ L'application est developpée sous android studio.
 ## Base de donnée
 
 L'application possède une base de donnée locale sur les plantes, de type sqlite.
+
+## source
+
+le code source de l'application peut être trouvé ici : https://github.com/leodechaumet/carePlant/tree/master/app/src/main
