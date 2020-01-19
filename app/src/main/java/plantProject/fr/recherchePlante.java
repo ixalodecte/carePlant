@@ -97,6 +97,7 @@ public class recherchePlante extends NavDrawerActivity {
     public void affichage(LinkedList<Plante> plante){
         Log.d("taille", String.valueOf(plante.size()));
         elemList.clear();
+        //On affiche seulement les 20 premiềres plantes
         for (int i =0; i<20; i++){
             if (!plante.isEmpty()){
                 Log.d("nomPlante", plante.getFirst().nom);
