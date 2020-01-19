@@ -2,7 +2,6 @@ package plantProject.fr;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +23,7 @@ import com.google.android.material.snackbar.Snackbar;
 public class NavDrawerActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private AppBarConfiguration mAppBarConfiguration;
+    public String[] layers;
     public DrawerLayout drawer;
 
 
@@ -31,7 +31,10 @@ public class NavDrawerActivity extends AppCompatActivity implements NavigationVi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        View nav;
+        Button temp;
+        Button hum;
+        Button search;
 
 
 

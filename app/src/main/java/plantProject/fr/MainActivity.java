@@ -33,12 +33,14 @@ public class MainActivity extends NavDrawerActivity {
     private Button param;
     private ImageButton recherche;
     private TextView reservoir;
+    private double marge;
     private TextView TV_nomPlante;
     private TextView textErrorReservoir;
     public static double humidite;
     public static double temperature;
     public static double luminosite;
     public static int niveau;
+    public static boolean probleme;
     public static String nom;
     public static Plante plante;
 

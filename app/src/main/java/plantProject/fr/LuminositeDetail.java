@@ -36,6 +36,6 @@ public class LuminositeDetail extends NavDrawerActivity {
             message.setText("Tout est OK");
         }
 
-        valeur.setText(MainActivity.luminosite + " lux");
+        valeur.setText(String.valueOf(MainActivity.luminosite) + " lux");
     }
 }
