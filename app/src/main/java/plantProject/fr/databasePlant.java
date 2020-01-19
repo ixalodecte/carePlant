@@ -17,8 +17,8 @@ public class databasePlant extends SQLiteOpenHelper {
     public static final String COL_2 = "humiditePlus";
     public static final String COL_3 = "temperatureMoins";
     public static final String COL_4 = "temperaturePlus";
-    public static final String COL_5 = "lminositeMoins";
-    public static final String COL_6 = "luminositePlus";
+    public static final String COL_5 = "lminositeMoins"; //deprecated
+    public static final String COL_6 = "luminositePlus"; //deprecated
 
 
     public static final String DATABASE_NAME = "plantDB.db";
@@ -34,34 +34,34 @@ public class databasePlant extends SQLiteOpenHelper {
                     COL_6 + " REAL);";
 
     public databasePlant(@Nullable Context context) {
-        super(context, DATABASE_NAME , null, 2);
+        super(context, DATABASE_NAME , null, 3);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(TABLE_CREATE);
         db.execSQL("INSERT INTO " + TABLE_NAME + " Values('epicea', 2.0, 50.0, 20, 30, 3000, 7000)");
-        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('coucou', 3.0, 50.0, 25, 30, 1000, 2000 )");
-        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('test', 7.0, 20.0, 10, 15, 1000, 2000)");
-        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('cactus', 2.0, 50.0, 20, 30, 3000, 7000)");
+        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('clivia', 10.0, 60.0, 7, 40, 1000, 2000 )");
+        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('fougere de boston', 5.0, 50.0, 18, 30, 1000, 2000)");
+        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('cactus', 2.0, 40.0, 30, 40, 3000, 7000)");
         db.execSQL("INSERT INTO " + TABLE_NAME + " Values('bonzai', 3.0, 50.0, 25, 30, 1000, 2000 )");
-        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('arbuste', 7.0, 20.0, 10, 15, 1000, 2000)");
-        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('tardis', 2.0, 50.0, 20, 30, 3000, 7000)");
+        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('basilic', 7.0, 70.0, 10, 40, 1000, 2000)");
+        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('petunia', 2.0, 70.0, 10, 40, 3000, 7000)");
         db.execSQL("INSERT INTO " + TABLE_NAME + " Values('acacia', 3.0, 50.0, 25, 30, 1000, 2000 )");
         db.execSQL("INSERT INTO " + TABLE_NAME + " Values('rose', 7.0, 20.0, 10, 15, 1000, 2000)");
         db.execSQL("INSERT INTO " + TABLE_NAME + " Values('tulipe', 2.0, 50.0, 20, 30, 3000, 7000)");
         db.execSQL("INSERT INTO " + TABLE_NAME + " Values('bleuet', 3.0, 50.0, 25, 30, 1000, 2000 )");
         db.execSQL("INSERT INTO " + TABLE_NAME + " Values('muguet', 7.0, 20.0, 10, 15, 1000, 2000)");
         db.execSQL("INSERT INTO " + TABLE_NAME + " Values('fougere', 2.0, 50.0, 20, 30, 3000, 7000)");
-        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('mousse', 3.0, 50.0, 25, 30, 1000, 2000 )");
+        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('plante carnivore', 3.0, 50.0, 7, 30, 1000, 2000 )");
         db.execSQL("INSERT INTO " + TABLE_NAME + " Values('roseaux', 7.0, 20.0, 10, 15, 1000, 2000)");
         db.execSQL("INSERT INTO " + TABLE_NAME + " Values('pissenlit', 2.0, 50.0, 20, 30, 3000, 7000)");
-        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('trefle', 3.0, 50.0, 25, 30, 1000, 2000 )");
-        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('zozo', 7.0, 20.0, 10, 15, 1000, 2000)");
-        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('cactus du sud', 3.0, 50.0, 25, 30, 1000, 2000 )");
-        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('cactus du nord', 7.0, 20.0, 10, 15, 1000, 2000)");
-        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('cactus lunaire', 2.0, 50.0, 20, 30, 3000, 7000)");
-        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('cactus carnivore', 3.0, 50.0, 25, 30, 1000, 2000 )");
+        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('ciboulette', 3.0, 50.0, 7, 40, 1000, 2000 )");
+        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('oignons', 7.0, 20.0, 7, 40, 1000, 2000)");
+        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('histiscus rose de Chine', 3.0, 50.0, 15, 30, 1000, 2000 )");
+        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('impatiente', 7.0, 70.0, 10, 30, 1000, 2000)");
+        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('Melanchoe', 2.0, 50.0, 15, 30, 3000, 7000)");
+        db.execSQL("INSERT INTO " + TABLE_NAME + " Values('rosier', 3.0, 50.0, 10, 40, 1000, 2000 )");
     }
 
     @Override
