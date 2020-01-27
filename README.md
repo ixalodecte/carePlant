@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Cette application mobile constitue l'interface graphique de notre pot de fleur connecté (lien vers le dépot : [https://github.com/institut-galilee/Les-Licornes](https://github.com/institut-galilee/Les-Licornes).
+Cette application mobile constitue l'interface graphique de notre pot de fleur connecté (lien vers le dépot : [https://github.com/institut-galilee/Les-Licornes](https://github.com/institut-galilee/Les-Licornes)).
 Elle a pour but d'afficher les valeurs des capteurs reliés à l'arduino, et de transmettre certaines informations à l'arduino.
 
 ## Environnement
